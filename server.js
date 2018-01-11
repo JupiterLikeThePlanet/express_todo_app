@@ -15,8 +15,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
-	res.send("Abottobad");
+	res.send("About A Boy by Nick Hornby");
 });
+
+
+app.use(express.static(__dirname + "/public"));
 
 app.listen(PORT, function(){
 	console.log("Your server is now up and running on port " + PORT);

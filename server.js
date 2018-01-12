@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
-var PORT = 3000;
+//heroku gives us a port we can listen to
+var PORT = process.env.PORT || 3000;
 var middleware = require("./middleware.js")
 
 
@@ -16,10 +17,7 @@ app.get('/about', middleware.requireAuthentication, function(req, res) {
 });
 
 app.use(express.static(__dirname + "/public"));
-// >> replaces this stuff
-	// app.get('/', function(req, res) {
-	// 	res.send("Hellooooo Nurse");
-	// });
+
 
 app.listen(PORT, function(){
 	console.log("Your server is now up and running on port " + PORT);

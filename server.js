@@ -1,47 +1,36 @@
 var express = require('express');
 var app = express();
 var PORT = 3000;
+var middleware = require("./middleware.js")
 
-var middleware = {
-	requireAuthentication: function(req, res, next) {
-		console.log("Hey now. This is private.");
-	}
-}
+//route level middleware (e.g. something that requires user to be logged in)
+// var middleware = {
+// 	requireAuthentication: function(req, res, next) {
+// 		console.log("Hey now. This is private.");
+// 		next();
+// 	},
+// 	logger: function(req, res, next) {
+// 		console.log("Request " + ' ' + new Date().toString() + ' ' + req.method + ' ' + req.originalUrl)
+// 		next();
+// 	}
+// }
 
-// app.use(middleware.requireAuthentication());
+//Application level
+app.use(middleware.logger);
+//important to specify middleware up top. Won't run after /about route
+// app.use(middleware.requireAuthentication);
 
-app.get('/', function(req, res) {
-	res.send("Hellooooo Nurse");
-});
-
-app.get('/about', function(req, res) {
+//route level
+app.get('/about', middleware.requireAuthentication, function(req, res) {
 	res.send("About A Boy by Nick Hornby");
 });
 
-
 app.use(express.static(__dirname + "/public"));
+// >> replaces this stuff
+	// app.get('/', function(req, res) {
+	// 	res.send("Hellooooo Nurse");
+	// });
 
 app.listen(PORT, function(){
 	console.log("Your server is now up and running on port " + PORT);
 });
-
-// var express = require('express');
-
-// app.listen(PORT);
-
-
-
-
-
-
-// var app = express();
-//
-// app.get('/', function (req, res) {
-// 	res.send('Hello Express!');
-// });
-//
-// app.get('/about', function (req, res) {
-// 	res.send('About Us');
-// });
-//
-// app.listen(3000);

@@ -1,22 +1,29 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 
 var app = express();
 
 var PORT = process.env.PORT || 3000;
 
-var todos = [{
-    id: 1,
-    description: 'Call Shelly',
-    completed: false,
-}, {
-    id: 2,
-    description: 'Eat Taco Bell Cravings Deal Package',
-    completed: false,
-}, {
-    id: 3,
-    description: 'Complain',
-    completed: true,
-}];
+var todoNextId = 1;
+
+// var todos = [{
+//     id: 1,
+//     description: 'Call Shelly',
+//     completed: false,
+// }, {
+//     id: 2,
+//     description: 'Eat Taco Bell Cravings Deal Package',
+//     completed: false,
+// }, {
+//     id: 3,
+//     description: 'Complain',
+//     completed: true,
+// }];
+
+var todos = []
+
+app.use(bodyParser.json());
 
 //GET todos
 
@@ -50,6 +57,18 @@ app.get('/todos/:id', function (req, res) {
     }
 
 });
+
+// post
+
+app.post("/todos", function(req, res){
+    var body = req.body;
+
+    console.log("description " + body.description);
+
+    res.json(body);
+
+
+})
 
 
 app.listen(PORT, function(){

@@ -17,6 +17,7 @@
   "homepage": "https://github.com/JupiterLikeThePlanet/express_todo_app#readme",
   "description": "Simple Express TODO App",
   "dependencies": {
+    "body-parser": "^1.13.3",
     "express": "^4.13.3"
   }
 }

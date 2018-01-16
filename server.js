@@ -10,7 +10,7 @@ var todos = [{
     completed: false,
 }, {
     id: 2,
-    description: 'Eat Taco Bell',
+    description: 'Eat Taco Bell Cravings Deal Package',
     completed: false,
 }, {
     id: 3,

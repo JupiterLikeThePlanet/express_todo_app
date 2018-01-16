@@ -46,7 +46,7 @@ app.get('/todos/:id', function (req, res) {
     if (matchedTodo) {
         res.json(matchedTodo);
     }else{
-        res.status(400).send();
+        res.status(404).send();
     }
 
 });

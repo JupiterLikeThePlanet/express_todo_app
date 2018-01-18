@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d9f858a4-9395-4e8f-adc4-faa56a7b4be1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="express_server_boilerplate.iws" />
@@ -29,9 +31,15 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="354">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <marker date="1516243028000" expanded="true" signature="0:637" ph="{&quot;name&quot;: &quot;express_todo_app&quot;...}" />
+                <marker date="1516243028000" expanded="true" signature="89:152" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+                <marker date="1516243028000" expanded="true" signature="170:272" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+                <marker date="1516243028000" expanded="true" signature="320:402" ph="{&quot;url&quot;: &quot;https://github.com/JupiterLikeThePlanet/express_todo_app/issues&quot;...}" />
+                <marker date="1516243028000" expanded="true" signature="547:635" ph="{&quot;body-parser&quot;: &quot;^1.13.3&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,8 +47,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -218,12 +226,12 @@
       <workItem from="1515721159845" duration="9827000" />
       <workItem from="1516066552197" duration="6138000" />
       <workItem from="1516219771379" duration="572000" />
-      <workItem from="1516240245923" duration="762000" />
+      <workItem from="1516240245923" duration="3214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26278000" />
+    <option name="totallyTimeSpent" value="28730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="23" width="1043" height="831" extended-state="0" />
@@ -234,18 +242,18 @@
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -268,7 +276,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1516243028000" expanded="true" signature="0:637" ph="{&quot;name&quot;: &quot;express_todo_app&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="89:152" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="170:272" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="320:402" ph="{&quot;url&quot;: &quot;https://github.com/JupiterLikeThePlanet/express_todo_app/issues&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="547:635" ph="{&quot;body-parser&quot;: &quot;^1.13.3&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -276,7 +290,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
+          <folding>
+            <marker date="1516243028000" expanded="true" signature="0:637" ph="{&quot;name&quot;: &quot;express_todo_app&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="89:152" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="170:272" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="320:402" ph="{&quot;url&quot;: &quot;https://github.com/JupiterLikeThePlanet/express_todo_app/issues&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="547:635" ph="{&quot;body-parser&quot;: &quot;^1.13.3&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -300,7 +320,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
+          <folding>
+            <marker date="1516243028000" expanded="true" signature="0:637" ph="{&quot;name&quot;: &quot;express_todo_app&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="89:152" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="170:272" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="320:402" ph="{&quot;url&quot;: &quot;https://github.com/JupiterLikeThePlanet/express_todo_app/issues&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="547:635" ph="{&quot;body-parser&quot;: &quot;^1.13.3&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -333,7 +359,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
+          <folding>
+            <marker date="1516243028000" expanded="true" signature="0:637" ph="{&quot;name&quot;: &quot;express_todo_app&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="89:152" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="170:272" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="320:402" ph="{&quot;url&quot;: &quot;https://github.com/JupiterLikeThePlanet/express_todo_app/issues&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="547:635" ph="{&quot;body-parser&quot;: &quot;^1.13.3&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -369,26 +401,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="354">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1516243028000" expanded="true" signature="0:637" ph="{&quot;name&quot;: &quot;express_todo_app&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="89:152" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="170:272" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="320:402" ph="{&quot;url&quot;: &quot;https://github.com/JupiterLikeThePlanet/express_todo_app/issues&quot;...}" />
+            <marker date="1516243028000" expanded="true" signature="547:635" ph="{&quot;body-parser&quot;: &quot;^1.13.3&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        <state relative-caret-position="108">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding />
         </state>
       </provider>

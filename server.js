@@ -65,7 +65,6 @@ app.post("/todos", function(req, res){
     var body = _.pick(req.body, 'description', 'completed')
 
 
-
     if (!_.isBoolean(body.completed) || !_.isString(body.description) || body.description.trim().length === 0){
         // res.status(400).send();
         return res.status(400).send();
@@ -83,7 +82,42 @@ app.post("/todos", function(req, res){
     res.json(body);
 
 
-})
+});
+
+// DELETE
+
+app.delete("/todos/:id", function(req, res){
+    var todoId = parseInt(req.params.id, 10)
+
+    console.log("TODO id: " + todoId)
+
+    var deletedTodo = _.findWhere(todos, {id: todoId});
+
+    console.log("Deleted TODO: " + deletedTodo)
+
+    if (!deletedTodo) {
+
+        console.log("In the if statement");
+
+        res.status(404).json({"error": "No TODO found with that id"});
+
+
+    }else{
+        console.log("In the else statement")
+
+        var todoArray = _.without(todos, deletedTodo);
+
+        console.log("Todo Array: " + todoArray)
+
+        console.log("Deleted TODO: " + deletedTodo);
+
+        res.json(todoArray);
+
+    }
+
+
+});
+
 
 
 app.listen(PORT, function(){

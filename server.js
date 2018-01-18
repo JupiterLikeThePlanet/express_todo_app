@@ -63,7 +63,13 @@ app.get('/todos/:id', function (req, res) {
 app.post("/todos", function(req, res){
     var body = req.body;
 
-    console.log("description " + body.description);
+    body.id = todoNextId
+
+    todoNextId = todoNextId + 1
+
+    todos.push(body)
+
+    console.log("description: " + body.description, ", completed: " + body.completed, ", id: " + body.id);
 
     res.json(body);
 

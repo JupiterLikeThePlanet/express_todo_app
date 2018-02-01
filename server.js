@@ -171,23 +171,6 @@ app.put("/todos/:id", function(req, res){
 
     _.extend(updatedTodo, validAttributes)
 
-    //     console.log("Valid Attributes being checked")
-    //     console.log(validAttributes)
-    //
-    //     if(validAttributes.description){
-    //         console.log("if, validAttributes.description")
-    //         updatedTodo.description = validAttributes.description.trim();
-    //         console.log("did description update?: " + updatedTodo.description)
-    //     }
-    //
-    //     if(validAttributes.completed){
-    //         console.log("if, validAttributes.completed")
-    //         updatedTodo.completed = validAttributes.completed;
-    //         console.log("did completed update?: " + updatedTodo.completed)
-    //     }
-    //
-    //
-    // console.log("UPDATED TODO LIST: " + updatedTodo.completed + " , " + updatedTodo.description);
 
     res.json(updatedTodo);
 

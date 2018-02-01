@@ -8,19 +8,19 @@ var PORT = process.env.PORT || 3000;
 
 var todoNextId = 1;
 
-// var todos = [{
-//     id: 1,
-//     description: 'Call Shelly',
-//     completed: false,
-// }, {
-//     id: 2,
-//     description: 'Eat Taco Bell Cravings Deal Package',
-//     completed: false,
-// }, {
-//     id: 3,
-//     description: 'Complain',
-//     completed: true,
-// }];
+var todos = [{
+    id: 1,
+    description: 'Call Shelly',
+    completed: false,
+}, {
+    id: 2,
+    description: 'Eat Taco Bell Cravings Deal Package',
+    completed: false,
+}, {
+    id: 3,
+    description: 'Complain',
+    completed: true,
+}];
 
 // {
 //     "description": "Call Shelly",
@@ -33,7 +33,7 @@ var todoNextId = 1;
 //         "completed": true
 // }
 
-var todos = []
+// var todos = []
 
 app.use(bodyParser.json());
 
@@ -50,17 +50,10 @@ app.get("/todos", function(req, res){
 //GET individual todo
 
 app.get('/todos/:id', function (req, res) {
+    // turn the params from a string into an integer
     var todoId = parseInt(req.params.id, 10);
-    // var todoId = parseInt(req.params.id, 10);
     var matchedTodo = _.findWhere(todos, {id: todoId});
 
-
-    // todos.forEach(function (todo) {
-    //
-    //     if (todoId === todo.id) {
-    //         matchedTodo = todo;
-    //     }
-    // });
 
     if (matchedTodo) {
         res.json(matchedTodo);
@@ -70,9 +63,10 @@ app.get('/todos/:id', function (req, res) {
 
 });
 
-// post
+// POST a new todo
 
 app.post("/todos", function(req, res){
+    //pick the elements from the api for authentication or, rather, what you want
     var body = _.pick(req.body, 'description', 'completed')
 
 
@@ -102,6 +96,7 @@ app.delete("/todos/:id", function(req, res){
 
     // console.log("TODO id: " + todoId)
 
+    //takes in object and can use object attribute
     var deletedTodo = _.findWhere(todos, {id: todoId});
 
     // console.log("Deleted TODO: " + deletedTodo)
@@ -133,51 +128,68 @@ app.delete("/todos/:id", function(req, res){
 // PUT
 
 app.put("/todos/:id", function(req, res){
+
     var todoId = parseInt(req.params.id, 10)
-
-    console.log("TODOid: " + todoId);
-
     var body = _.pick(req.body, 'description', 'completed')
-
-    console.log(body);
-
+    var validAttributes = {}
     var updatedTodo = _.findWhere(todos, {id: todoId});
-
-    console.log("updated TODO: " + updatedTodo);
 
     if (!updatedTodo) {
 
-        console.log("In Outer IF statement");
         res.status(404).json({"error": "No TODO item with this id"})
 
-    } else {
-
-        console.log("In OUTER ELSE statement")
-
-        // var body = _.pick(req.body, 'description', 'completed')
-
-        // console.log("body: " + body);
-
-        if (!_.isBoolean(body.completed) || !_.isString(body.description) || body.description.trim().length === 0){
-
-            console.log("In Outer IF statement");
-
-            return res.status(400).send();
-
-        }
-
-        updatedTodo.description = body.description.trim();
-        updatedTodo.completed = body.completed;
-        // updatedTodo.body.description = body.description.trim();
-        // updatedTodo.body.completed = body.completed;
-
-        console.log("Updates: " + updatedTodo.description + ", " + updatedTodo.completed )
-
-        console.log("UPDATED > description: " + body.description, ", completed: " + body.completed);
-
-        res.json(body);
-
     }
+
+    //Checking on 'completed' status///////////////////////////////////////
+    if (body.hasOwnProperty('completed') && _.isBoolean(body.completed)) {
+        //exists and is a boolean
+        console.log("if, completed")
+        validAttributes.completed = body.completed;
+
+    } else if(body.hasOwnProperty('completed')) {
+        //exists but isn't a boolean
+        res.status(400).json({"error": "Completed is not a boolean"})
+
+    } else {
+        console.log("else nothing, completed")
+    }
+
+    //Checking on 'description' status///////////////////////////////////////
+    if (body.hasOwnProperty('description') && _.isString(body.description) && body.description.trim().length > 0) {
+        console.log("if, description")
+        //exists and is a boolean
+        validAttributes.description = body.description;
+    } else if(body.hasOwnProperty('description')) {
+        //exists but isn't a boolean
+        res.status(400).json({"error": "Description is not a string"})
+    } else {
+        console.log("else nothing, description")
+    }
+
+
+    //updating portion
+
+    _.extend(updatedTodo, validAttributes)
+
+    //     console.log("Valid Attributes being checked")
+    //     console.log(validAttributes)
+    //
+    //     if(validAttributes.description){
+    //         console.log("if, validAttributes.description")
+    //         updatedTodo.description = validAttributes.description.trim();
+    //         console.log("did description update?: " + updatedTodo.description)
+    //     }
+    //
+    //     if(validAttributes.completed){
+    //         console.log("if, validAttributes.completed")
+    //         updatedTodo.completed = validAttributes.completed;
+    //         console.log("did completed update?: " + updatedTodo.completed)
+    //     }
+    //
+    //
+    // console.log("UPDATED TODO LIST: " + updatedTodo.completed + " , " + updatedTodo.description);
+
+    res.json(updatedTodo);
 
 })
 

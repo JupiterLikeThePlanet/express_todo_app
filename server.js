@@ -10,7 +10,7 @@ var todoNextId = 1;
 
 var todos = [{
     id: 1,
-    description: 'Call Shelly',
+    description: 'Paradox',
     completed: false,
 }, {
     id: 2,
@@ -44,6 +44,25 @@ app.get('/todos', function (req, res) {
     } else if (queryParams.hasOwnProperty('completed') && queryParams.completed === 'false') {
         filteredTodos = _.where(filteredTodos, {completed: false});
     }
+
+    console.log("What am I: " + queryParams.q)
+
+
+
+    if (queryParams.hasOwnProperty('q') && queryParams.q.trim().length > 0) {
+
+        // console.log("Hit something here")
+        filteredTodos = _.filter(filteredTodos, function (todo) {
+            return todo.description.toLowerCase().indexOf(queryParams.q.toLowerCase()) > -1;
+        })
+        console.log("filtered todos: " + filteredTodos)
+    }
+    // } else if (queryParams.hasOwnProperty('description') && queryParams.description.trim().length === 0) {
+    //     console.log("there is no description matching that term")
+    // } else {
+    //
+    // }
+
 
     res.json(filteredTodos);
 });

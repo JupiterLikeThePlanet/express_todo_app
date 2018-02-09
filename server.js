@@ -8,21 +8,21 @@ var PORT = process.env.PORT || 3000;
 
 var todoNextId = 1;
 
-var todos = [{
-    id: 1,
-    description: 'Paradox',
-    completed: false,
-}, {
-    id: 2,
-    description: 'Eat Taco Bell Cravings Deal Package',
-    completed: false,
-}, {
-    id: 3,
-    description: 'Complain',
-    completed: true,
-}];
+// var todos = [{
+//     id: 1,
+//     description: 'Paradox',
+//     completed: false,
+// }, {
+//     id: 2,
+//     description: 'Eat Taco Bell Cravings Deal Package',
+//     completed: false,
+// }, {
+//     id: 3,
+//     description: 'Complain',
+//     completed: true,
+// }];
 
-// var todos = []
+var todos = []
 
 app.use(bodyParser.json());
 
@@ -46,7 +46,6 @@ app.get('/todos', function (req, res) {
     }
 
     console.log("What am I: " + queryParams.q)
-
 
 
     if (queryParams.hasOwnProperty('q') && queryParams.q.trim().length > 0) {

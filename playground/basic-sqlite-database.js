@@ -30,9 +30,30 @@ sequelize.sync({force: true}).then(function() {
     Todo.create({
         description: "Oingo Boingo",
         completed: false
-    }).then(function(todo){
-        console.log('FINISHED!');
-        console.log(todo);
+    }).then(function(todo) {
+        return Todo.create({
+            description: "Evo Devo"
+        })
+    }).then(function( ){
+        // Todo.findById(1).then(todo => {
+        //     console.log(todo)
+        // })
+        return Todo.findAll({
+            where: {
+                completed: false
+            }
+        });
+    }).then(function(todos){
+        if (todos) {
+            todos.forEach(function(todo){
+                console.log(todo.toJSON());
+            })
+        } else {
+            console.log("No todos Found!")
+        }
+    // })
+        // console.log('FINISHED!');
+        // console.log(todo);
     }).catch(function(e){
         console.log("ERROR : " + e.message);
     });

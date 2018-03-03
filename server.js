@@ -95,22 +95,29 @@ app.post("/todos", function(req, res){
     var body = _.pick(req.body, 'description', 'completed')
 
 
-    if (!_.isBoolean(body.completed) || !_.isString(body.description) || body.description.trim().length === 0){
-        // res.status(400).send();
-        return res.status(400).send();
-    }
+    db.todo.create(body).then(function(todo) {
+        console.log("description: " + todo.description, ", completed: " + todo.completed, ", id: " + todo.id);
+        res.json(todo.toJSON());
+    }, function(e){
+        res.status(400).json(e)
+    })
 
-    body.description = body.description.trim()
-
-    body.id = todoNextId++
-
-
-    todos.push(body)
-
-    console.log("description: " + body.description, ", completed: " + body.completed, ", id: " + body.id);
-
-    res.json(body);
-
+    // if (!_.isBoolean(body.completed) || !_.isString(body.description) || body.description.trim().length === 0){
+    //     // res.status(400).send();
+    //     return res.status(400).send();
+    // }
+    //
+    // body.description = body.description.trim()
+    //
+    // body.id = todoNextId++
+    //
+    //
+    // todos.push(body)
+    //
+    // console.log("description: " + body.description, ", completed: " + body.completed, ", id: " + body.id);
+    //
+    // res.json(body);
+    //
 
 });
 
@@ -201,7 +208,7 @@ app.put("/todos/:id", function(req, res){
 
 })
 
-db.sequelize.sync.then(function () {
+db.sequelize.sync().then(function () {
     app.listen(PORT, function(){
         console.log("Port " + PORT +" is always listening")
     })

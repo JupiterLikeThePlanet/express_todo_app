@@ -80,10 +80,16 @@ app.get('/todos/:id', function (req, res) {
 
 
     db.todo.findById(todoId).then(function(todo){
-        console.log('Found id ' + todo.id + ' and the description is ' + todo.description)
+        //if a todo exists
+        if (!!todo){
+            console.log('Found id ' + todo.id + ' and the description is ' + todo.description)
             res.json(todo.toJSON());
-    }, function(e){
+        }else{
             res.status(404).send();
+        }
+
+    }, function(e){
+            res.status(500).send();
         }
     )
 

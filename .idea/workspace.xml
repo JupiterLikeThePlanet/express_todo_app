@@ -50,8 +50,8 @@
       <file leaf-file-name="basic-sqlite-database.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            <state relative-caret-position="153">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -236,12 +236,12 @@
       <workItem from="1516240245923" duration="16981000" />
       <workItem from="1517508392826" duration="7091000" />
       <workItem from="1518127204612" duration="13701000" />
-      <workItem from="1519775156387" duration="4465000" />
+      <workItem from="1519775156387" duration="8643000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67754000" />
+    <option name="totallyTimeSpent" value="71932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="717" height="831" extended-state="0" />
@@ -279,7 +279,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -488,8 +488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        <state relative-caret-position="153">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>

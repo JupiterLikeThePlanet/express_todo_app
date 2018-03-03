@@ -24,38 +24,69 @@ var Todo = sequelize.define('todo', {
 
 
     //{force: true} is a sync param that will drop tables
-sequelize.sync({force: true}).then(function() {
+sequelize.sync().then(function() {
     console.log('Everything is synced');
 
-    Todo.create({
-        description: "Oingo Boingo",
-        completed: false
-    }).then(function(todo) {
-        return Todo.create({
-            description: "Evo Devo"
-        })
-    }).then(function( ){
-        // Todo.findById(1).then(todo => {
-        //     console.log(todo)
-        // })
-        return Todo.findAll({
+
+    function findOneInstance(todo) {
+        return Todo.findOne({
             where: {
-                completed: false
+                description: {
+                   $like: '% #{todo} %'
+                }
             }
-        });
-    }).then(function(todos){
-        if (todos) {
-            todos.forEach(function(todo){
-                console.log(todo.toJSON());
-            })
-        } else {
-            console.log("No todos Found!")
-        }
-    // })
-        // console.log('FINISHED!');
-        // console.log(todo);
+        })
+    }
+
+    findOneInstance('Devo').then(function(todo){
+        console.log("Here is your TODO")
+        console.log(todo.description)
     }).catch(function(e){
         console.log("ERROR : " + e.message);
     });
+
+        // .then(function(todo){
+        //     // todo will be the first entry of the Todos table with the title 'Oingo Boing' || null
+        //     // todo.description will contain the descritpion
+        //
+        //     // return todo
+        //     console.log(todo.toJSON)
+        // })
+    // }
+
+
+
+    // Todo.create({
+    //     description: "Oingo Boingo",
+    //     completed: false
+    // }).then(function(todo) {
+    //     return Todo.create({
+    //         description: "Evo Devo"
+    //     })
+    // }).then(function( ){
+    //     // Todo.findById(1).then(todo => {
+    //     //     console.log(todo)
+    //     // })
+    //     return Todo.findAll({
+    //         where: {
+    //             description: {
+    //                 $like: '%devo%'
+    //             }
+    //         }
+    //     });
+    // }).then(function(todos){
+    //     if (todos) {
+    //         todos.forEach(function(todo){
+    //             console.log(todo.toJSON());
+    //         })
+    //     } else {
+    //         console.log("No todos Found!")
+    //     }
+    // // })
+    //     // console.log('FINISHED!');
+    //     // console.log(todo);
+    // }).catch(function(e){
+    //     console.log("ERROR : " + e.message);
+    // });
 });
 

@@ -77,14 +77,26 @@ app.get("/todos", function(req, res){
 app.get('/todos/:id', function (req, res) {
     // turn the params from a string into an integer
     var todoId = parseInt(req.params.id, 10);
-    var matchedTodo = _.findWhere(todos, {id: todoId});
 
 
-    if (matchedTodo) {
-        res.json(matchedTodo);
-    }else{
-        res.status(404).send();
-    }
+    db.todo.findById(todoId).then(function(todo){
+        console.log('Found id ' + todo.id + ' and the description is ' + todo.description)
+            res.json(todo.toJSON());
+    }, function(e){
+            res.status(404).send();
+        }
+    )
+
+
+
+    // var matchedTodo = _.findWhere(todos, {id: todoId});
+    //
+    //
+    // if (matchedTodo) {
+    //     res.json(matchedTodo);
+    // }else{
+    //     res.status(404).send();
+    // }
 
 });
 

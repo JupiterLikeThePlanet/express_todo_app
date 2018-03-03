@@ -39,12 +39,13 @@ sequelize.sync().then(function() {
     function findByTodoId(id) {
         return Todo.findById(id).then(function(todo){
             console.log('Found id ' + todo.id + ' and the description is ' + todo.description)
+            console.log(todo.toJSON())
         })
     }
 
     findOneInstance('Evo Devo').then(function(todo){
-        console.log("Here is your TODO")
-        console.log(todo.description)
+        console.log("Here is your TODO: " + todo.description)
+        console.log(todo.toJSON())
     }).catch(function(e){
         console.log("ERROR : " + e.message);
     });
@@ -53,6 +54,9 @@ sequelize.sync().then(function() {
     findByTodoId(1).catch(function(e){
         console.log("ERROR : " + e.message);
     });
+
+
+
 
 
         // .then(function(todo){

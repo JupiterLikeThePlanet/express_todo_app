@@ -201,10 +201,12 @@ app.put("/todos/:id", function(req, res){
 
 })
 
-
-
-app.listen(PORT, function(){
-    console.log("Port " + PORT +" is always listening")
+db.sequelize.sync.then(function () {
+    app.listen(PORT, function(){
+        console.log("Port " + PORT +" is always listening")
+    })
 })
+
+
 
 

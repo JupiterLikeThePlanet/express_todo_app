@@ -31,19 +31,29 @@ sequelize.sync().then(function() {
     function findOneInstance(todo) {
         return Todo.findOne({
             where: {
-                description: {
-                   $like: '% #{todo} %'
-                }
+                description: todo
             }
         })
     }
 
-    findOneInstance('Devo').then(function(todo){
+    function findByTodoId(id) {
+        return Todo.findById(id).then(function(todo){
+            console.log('Found id ' + todo.id + ' and the description is ' + todo.description)
+        })
+    }
+
+    findOneInstance('Evo Devo').then(function(todo){
         console.log("Here is your TODO")
         console.log(todo.description)
     }).catch(function(e){
         console.log("ERROR : " + e.message);
     });
+
+
+    findByTodoId(1).catch(function(e){
+        console.log("ERROR : " + e.message);
+    });
+
 
         // .then(function(todo){
         //     // todo will be the first entry of the Todos table with the title 'Oingo Boing' || null

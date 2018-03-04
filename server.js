@@ -5,7 +5,7 @@ var db = require('./db.js');
 
 var app = express();
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5000;
 
 var todoNextId = 1;
 
@@ -239,6 +239,7 @@ app.put("/todos/:id", function(req, res){
 })
 
 db.sequelize.sync().then(function () {
+
     app.listen(PORT, function(){
         console.log("Port " + PORT +" is always listening")
     })

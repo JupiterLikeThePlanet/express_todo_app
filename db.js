@@ -1,8 +1,25 @@
 var Sequelize = require ('sequelize');
-var sequelize = new Sequelize(undefined, undefined, undefined, {
-    'dialect': 'sqlite',
-    'storage': __dirname + '/data/dev-todo-api.sqlite'
-});
+// will either load prod or dev, then upload approp db
+var env = process.env.NODE_ENV || 'development';
+var sequelize;
+
+
+if (env === 'production') {
+
+    new Sequelize(process.env.DATABASE_URL, {
+        'dialect': 'postgres',
+    });
+
+}else{
+
+    new Sequelize(undefined, undefined, undefined, {
+        'dialect': 'sqlite',
+        'storage': __dirname + '/data/dev-todo-api.sqlite'
+    });
+
+}
+
+
 
 var db = {}
 

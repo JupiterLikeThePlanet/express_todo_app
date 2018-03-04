@@ -6,13 +6,13 @@ var sequelize;
 
 if (env === 'production') {
 
-    new Sequelize(process.env.DATABASE_URL, {
-        'dialect': 'postgres',
+    sequelize = new Sequelize(process.env.DATABASE_URL, {
+        'dialect': 'postgres'
     });
 
 }else{
 
-    new Sequelize(undefined, undefined, undefined, {
+    sequelize = new Sequelize(undefined, undefined, undefined, {
         'dialect': 'sqlite',
         'storage': __dirname + '/data/dev-todo-api.sqlite'
     });

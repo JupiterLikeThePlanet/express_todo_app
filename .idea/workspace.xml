@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9f858a4-9395-4e8f-adc4-faa56a7b4be1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="express_server_boilerplate.iws" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="393">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,8 +49,8 @@
       <file leaf-file-name="basic-sqlite-database.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="50" selection-end-column="7" />
+            <state relative-caret-position="153">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="98" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -60,16 +61,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/todo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -87,10 +78,10 @@
         <option value="$PROJECT_DIR$/middleware.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/playground/basic-sqlite-database.js" />
         <option value="$PROJECT_DIR$/db.js" />
         <option value="$PROJECT_DIR$/models/todo.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/playground/basic-sqlite-database.js" />
         <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
@@ -270,12 +261,12 @@
       <workItem from="1516240245923" duration="16981000" />
       <workItem from="1517508392826" duration="7091000" />
       <workItem from="1518127204612" duration="13701000" />
-      <workItem from="1519775156387" duration="15808000" />
+      <workItem from="1519775156387" duration="20091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79097000" />
+    <option name="totallyTimeSpent" value="83380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="807" height="831" extended-state="0" />
@@ -513,10 +504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
+    <entry file="file://$PROJECT_DIR$/models/todo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="50" selection-end-column="7" />
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -529,6 +520,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="98" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -537,18 +536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/todo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        <state relative-caret-position="393">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding />
         </state>
       </provider>

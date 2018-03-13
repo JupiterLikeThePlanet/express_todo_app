@@ -38,7 +38,6 @@ module.exports = db;
 
 
 
-
 // var Sequelize = require ('sequelize');
 // // will either load prod or dev, then upload approp db
 // var env = process.env.NODE_ENV || 'development';

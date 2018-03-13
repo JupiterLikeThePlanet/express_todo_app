@@ -1,17 +1,16 @@
 var Sequelize = require('sequelize');
-// will either load prod or dev, then upload approp db
 var env = process.env.NODE_ENV || 'development';
 var sequelize;
 
 if (env === 'production') {
-    sequelize = new Sequelize(process.env.DATABASE_URL, {
-        dialect: 'postgres'
-    });
+	sequelize = new Sequelize(process.env.DATABASE_URL, {
+		dialect: 'postgres'
+	});
 } else {
-    sequelize = new Sequelize(undefined, undefined, undefined, {
-        'dialect': 'sqlite',
-        'storage': __dirname + '/data/dev-todo-api.sqlite'
-    });
+	sequelize = new Sequelize(undefined, undefined, undefined, {
+		'dialect': 'sqlite',
+		'storage': __dirname + '/data/dev-todo-api.sqlite'
+	});
 }
 
 var db = {};
@@ -21,6 +20,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 //setting it to an object allows up to pass multiple things instead of just one
+
 module.exports = db;
 
 
@@ -63,3 +63,4 @@ module.exports = db;
 //
 // //setting it to an object allows up to pass multiple things instead of just one
 // module.exports = db;
+
